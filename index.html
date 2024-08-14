@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Juego de mao</title>
+
+    <link href="stylos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="titulo" style="display: block"><h1>BATALLA NAVAL</h1></div>
+
+    <div id="logueo" style="display: block">
+      <div style="display: flex; gap: 70px; align-content: center">
+        <h2 class="subTitle">Definir los botes de cada equipo:</h2>
+        <button id="botonSet" onclick="botonPrimeraPagina()">
+          Siguiente Jugador
+        </button>
+      </div>
+
+      <h2 id="setJugador"></h2>
+      <div id="elecciones">
+        <table id="setBarcos"></table>
+        <div id="contenedorSet">
+          <h2>Barcos Posibles</h2>
+          <div id="barco1" onclick="seleccBarco(event)"></div>
+          <div id="barco2" onclick="seleccBarco(event)"></div>
+          <div id="barco3" onclick="seleccBarco(event)"></div>
+          <div id="barco4" onclick="seleccBarco(event)"></div>
+
+          <br /><br />
+
+          <button class="opc" id="btn1" onclick="rotar(event)">→</button>
+          <button class="opc" id="btn2" onclick="rotar(event)">↘</button>
+          <button class="opc" id="btn3" onclick="rotar(event)">↓</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="juego" style="display: none">
+      <h2>Es el turno de <spam id="nombreJugador"></spam></h2>
+      <div id="tableros">
+        <table id="mijuego"></table>
+        <table id="otrojuego"></table>
+      </div>
+      <button onclick="pantallaInter()">Siguiente Jugador</button>
+    </div>
+
+    <div id="espera" style="display: none">
+      <h2>Esperando a que el otro jugador termine</h2>
+      <button id="seguirJugando" onclick="cambiarJugador()">
+        Seguir Jugando
+      </button>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
