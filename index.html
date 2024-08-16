@@ -9,7 +9,7 @@
     <div id="titulo" style="display: block"><h1>BATALLA NAVAL</h1></div>
 
     <div id="logueo" style="display: block">
-      <div style="display: flex; gap: 70px; align-content: center">
+      <div id="tituloRegistro">
         <h2 class="subTitle">Definir los botes de cada equipo:</h2>
         <button id="botonSet" onclick="botonPrimeraPagina()">
           Siguiente Jugador
@@ -35,7 +35,7 @@
       </div>
     </div>
 
-    <div id="juego" style="display: none">
+    <div id="juego" style="display: block">
       <h2>Es el turno de <spam id="nombreJugador"></spam></h2>
       <div id="tableros">
         <table id="mijuego"></table>
@@ -44,7 +44,7 @@
       <button onclick="pantallaInter()">Siguiente Jugador</button>
     </div>
 
-    <div id="espera" style="display: none">
+    <div id="espera" style="display: block">
       <h2>Esperando a que el otro jugador termine</h2>
       <button id="seguirJugando" onclick="cambiarJugador()">
         Seguir Jugando
